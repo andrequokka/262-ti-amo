@@ -179,3 +179,42 @@ body{
 .hidden{
     display:none !important;
 }
+/* ========================= */
+/* VERSIONE TELEFONO         */
+/* ========================= */
+
+@media (max-width: 600px){
+
+    /* LOGO */
+
+    #logo{
+        width:90vw;
+        max-width:520px;
+    }
+
+    /* LETTERA */
+
+    #lettera{
+        width:95vw;
+        max-width:none;
+    }
+
+    #testoLettera{
+        top:18%;
+        left:13%;
+
+        width:74%;
+        height:60%;
+
+        font-size:8px;
+        line-height:1.7;
+    }
+
+    /* TORNA */
+
+    #back{
+        font-size:22px;
+        margin-top:25px;
+    }
+
+}
