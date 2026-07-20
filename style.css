@@ -122,10 +122,13 @@ body{
     font-family: monospace;
 }
 
-#lettera {
-    max-width: 700px;
-    text-align: center;
-    padding: 30px;
+#lettera{
+    position: relative;
+
+    width: 90vw;
+    max-width: 900px;
+
+    margin: 20px auto;
 }
 
 #lettera h2 {
@@ -154,25 +157,33 @@ body{
 }
 
 #foglio{
-    width: 100%;
-    image-rendering: pixelated;
-    display: block;
+    width:100%;
+    display:block;
+    image-rendering:pixelated;
 }
 
 #testoLettera{
-    position: absolute;
-    top: 32px;
-    left: 30px;
-    width: 195px;
-    height: 165px;
 
-    font-family: "Press Start 2P", monospace;
-    font-size: 7px;
-    line-height: 1.7;
-    color: #222;
+    position:absolute;
 
-    overflow-y: auto;
-    word-break: break-word;
+    top:13%;
+
+    left:14%;
+
+    width:72%;
+
+    height:63%;
+
+    overflow-y:auto;
+
+    font-family:"Press Start 2P", monospace;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#2b2b2b;
+
 }
 
 #testoLettera::-webkit-scrollbar{
