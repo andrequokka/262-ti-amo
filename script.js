@@ -8,13 +8,13 @@ window.onload = () => {
     const options = document.getElementById("options");
     const back = document.getElementById("back");
 
-    // Dopo "andre quokka presenta..."
+    // Intro iniziale
     setTimeout(() => {
         intro.style.display = "none";
         titleScreen.classList.remove("hidden");
     }, 4000);
 
-    // Apri il menu
+    // Apri menu
     options.onclick = () => {
         titleScreen.classList.add("hidden");
         menuScreen.classList.remove("hidden");
