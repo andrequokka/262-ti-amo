@@ -147,3 +147,40 @@ body{
 .hidden {
     display: none !important;
 }
+#lettera{
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+}
+
+#foglio{
+    width: 100%;
+    image-rendering: pixelated;
+    display: block;
+}
+
+#testoLettera{
+    position: absolute;
+    top: 32px;
+    left: 30px;
+    width: 195px;
+    height: 165px;
+
+    font-family: "Press Start 2P", monospace;
+    font-size: 7px;
+    line-height: 1.7;
+    color: #222;
+
+    overflow-y: auto;
+    word-break: break-word;
+}
+
+#testoLettera::-webkit-scrollbar{
+    width: 4px;
+}
+
+#back{
+    margin-top: 18px;
+    text-align: center;
+    cursor: pointer;
+}
