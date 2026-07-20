@@ -109,3 +109,41 @@ body{
     }
 
 }
+/* MENU DEDICA */
+
+#menuScreen {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+#lettera {
+    max-width: 700px;
+    text-align: center;
+    padding: 30px;
+}
+
+#lettera h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#lettera p {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+#back {
+    margin-top: 40px;
+    color: #cccccc;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
