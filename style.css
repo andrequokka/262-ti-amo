@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background:#000;
+    font-family:'Press Start 2P', cursive;
+}
+
+/* INTRO */
+
+#intro{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+    z-index:100;
+}
+
+#presenta{
+    color:white;
+    font-size:22px;
+    text-align:center;
+    line-height:1.8;
+    animation:intro 4s forwards;
+}
+
+/* SCHERMATA TITOLO */
+
+#titleScreen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+}
+
+.hidden{
+    display:none;
+}
+
+#logo{
+    width:520px;
+    image-rendering:pixelated;
+    image-rendering:crisp-edges;
+}
+
+#menu{
+    margin-top:50px;
+}
+
+#play,
+#options{
+    color:white;
+    font-size:18px;
+    text-align:center;
+    margin:18px 0;
+}
+
+#play{
+    animation:blink 1s infinite;
+}
+
+/* ANIMAZIONI */
+
+@keyframes intro{
+
+    0%{
+        opacity:0;
+        transform:translateY(0);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-140px);
+    }
+
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:.35;
+    }
+
+}
