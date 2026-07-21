@@ -263,3 +263,17 @@ body{
     }
 
 }
+#scrollHint{
+
+    color:white;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:10px;
+
+    text-align:center;
+
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
