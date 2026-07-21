@@ -151,13 +151,13 @@ body{
     left:15%;
 
     width:74%;
-    height:74%;
+    height:60%;
 
     overflow-y:auto;
 
     font-family:'Press Start 2P', cursive;
-    font-size:13px;
-    line-height:1.8;
+    font-size:11px;
+    line-height:1.6;
 
     color:#2b2b2b;
 }
