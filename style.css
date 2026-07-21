@@ -277,3 +277,19 @@ body{
     margin-bottom:20px;
 
 }
+#scrollHint{
+    position:absolute;
+
+    top:5%;
+    left:50%;
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-family:'Press Start 2P', cursive;
+    font-size:10px;
+
+    text-align:center;
+
+    width:90%;
+}
