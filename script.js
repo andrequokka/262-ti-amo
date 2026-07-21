@@ -1,5 +1,5 @@
 window.onload = () => {
-alert("CIAO");
+
     const intro = document.getElementById("intro");
     const titleScreen = document.getElementById("titleScreen");
     const menuScreen = document.getElementById("menuScreen");
