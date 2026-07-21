@@ -280,16 +280,15 @@ body{
 #scrollHint{
     position:absolute;
 
-    top:5%;
+    top:40px;
     left:50%;
     transform:translateX(-50%);
 
-    color:white;
-
-    font-family:'Press Start 2P', cursive;
-    font-size:10px;
+    width:90%;
 
     text-align:center;
 
-    width:90%;
+    color:white;
+    font-family:'Press Start 2P', cursive;
+    font-size:12px;
 }
