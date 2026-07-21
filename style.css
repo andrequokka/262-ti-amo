@@ -247,3 +247,19 @@ body{
     image-rendering:crisp-edges;
 
 }
+@media (max-width:600px){
+
+    #testoLettera{
+
+        top:16%;
+        left:13%;
+
+        width:74%;
+        height:64%;
+
+        font-size:9px;
+        line-height:1.5;
+
+    }
+
+}
