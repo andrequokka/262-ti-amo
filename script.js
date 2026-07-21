@@ -3,6 +3,7 @@ window.onload = () => {
     const intro = document.getElementById("intro");
     const titleScreen = document.getElementById("titleScreen");
     const menuScreen = document.getElementById("menuScreen");
+    const gameScreen = document.getElementById("gameScreen");
 
     const play = document.getElementById("play");
     const options = document.getElementById("options");
@@ -24,6 +25,12 @@ window.onload = () => {
     back.onclick = () => {
         menuScreen.classList.add("hidden");
         titleScreen.classList.remove("hidden");
+    };
+
+    // INIZIA GIOCO
+    play.onclick = () => {
+        titleScreen.classList.add("hidden");
+        gameScreen.classList.remove("hidden");
     };
 
 };
