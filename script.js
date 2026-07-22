@@ -59,7 +59,8 @@ window.onload = () => {
     let x = 210;
     let y = 620;
 
-    const speed = 4; let introWalk = true;
+    const speed = 4; 
+    let introWalk = true;
 
     window.keys = {};
 document.addEventListener("keydown",(e)=>{
