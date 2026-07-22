@@ -72,3 +72,37 @@ document.addEventListener("keydown", (e)=>{
     player.style.top=y+"px";
 
 });
+// ====================
+// MOVIMENTO FEDE
+// ====================
+
+const player = document.getElementById("player");
+
+let x = 80;
+let y = 330;
+const speed = 4;
+
+const keys = {};
+
+document.addEventListener("keydown", (e) => {
+    keys[e.key.toLowerCase()] = true;
+});
+
+document.addEventListener("keyup", (e) => {
+    keys[e.key.toLowerCase()] = false;
+});
+
+function movePlayer() {
+
+    if (keys["w"] || keys["arrowup"]) y -= speed;
+    if (keys["s"] || keys["arrowdown"]) y += speed;
+    if (keys["a"] || keys["arrowleft"]) x -= speed;
+    if (keys["d"] || keys["arrowright"]) x += speed;
+
+    player.style.left = x + "px";
+    player.style.top = y + "px";
+
+    requestAnimationFrame(movePlayer);
+}
+
+movePlayer();
