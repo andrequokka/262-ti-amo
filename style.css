@@ -316,7 +316,19 @@ body{
 
     position: absolute;
 
-    width: 320px;
+#room{
+
+    position:absolute;
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:contain;
+
+    image-rendering:pixelated;
+    image-rendering:crisp-edges;
+
+}
 
     image-rendering: pixelated;
     image-rendering: crisp-edges;
