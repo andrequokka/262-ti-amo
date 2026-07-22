@@ -70,11 +70,20 @@ document.addEventListener("keyup",(e)=>{
     window.keys[e.key] = false;
 });
 
-    function gameLoop(){
-if(window.keys["ArrowLeft"]) x -= speed;
-if(window.keys["ArrowRight"]) x += speed;
-if(window.keys["ArrowUp"]) y -= speed;
-if(window.keys["ArrowDown"]) y += speed;
+function gameLoop(){
+
+    if(x < 120){
+
+        x += 2;
+
+    }else{
+
+        if(window.keys["ArrowLeft"]) x -= speed;
+        if(window.keys["ArrowRight"]) x += speed;
+        if(window.keys["ArrowUp"]) y -= speed;
+        if(window.keys["ArrowDown"]) y += speed;
+
+    }
 
     player.style.left = x + "px";
     player.style.top = y + "px";
