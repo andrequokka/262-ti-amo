@@ -314,21 +314,15 @@ body{
 }
 #room{
 
-    position: absolute;
-
-#room{
-
     position:absolute;
 
-    width:100vw;
-    height:100vh;
-
-    object-fit:contain;
+    width:85vmin;
+    height:auto;
 
     image-rendering:pixelated;
     image-rendering:crisp-edges;
-
 }
+
 
     image-rendering: pixelated;
     image-rendering: crisp-edges;
