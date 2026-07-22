@@ -62,8 +62,7 @@ window.onload = () => {
     const speed = 4;
 
     window.keys = {};
-
-    document.addEventListener("keydown",(e)=>{
+document.addEventListener("keydown",(e)=>{
     window.keys[e.key] = true;
 });
 
@@ -86,7 +85,6 @@ if(window.keys["ArrowDown"]) y += speed;
 
 gameLoop();
 
-};
 const up = document.getElementById("up");
 const down = document.getElementById("down");
 const left = document.getElementById("left");
@@ -107,3 +105,4 @@ left.addEventListener("touchcancel", () => window.keys["ArrowLeft"] = false);
 right.addEventListener("touchstart", () => window.keys["ArrowRight"] = true);
 right.addEventListener("touchend", () => window.keys["ArrowRight"] = false);
 right.addEventListener("touchcancel", () => window.keys["ArrowRight"] = false);
+};
