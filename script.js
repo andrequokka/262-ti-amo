@@ -72,7 +72,7 @@ document.addEventListener("keyup",(e)=>{
 
 function gameLoop(){
 
-    if(y < 390){
+    if(y < 620){
 
         y -= 2;
 
