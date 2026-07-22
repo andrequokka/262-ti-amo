@@ -73,36 +73,18 @@ window.onload = () => {
 
     function gameLoop(){
 
-        if(keys["ArrowLeft"]) x -= speed;
-        if(keys["ArrowRight"]) x += speed;
-        if(keys["ArrowUp"]) y -= speed;
-        if(keys["ArrowDown"]) y += speed;
+    if(keys["ArrowLeft"]) x -= speed;
+    if(keys["ArrowRight"]) x += speed;
+    if(keys["ArrowUp"]) y -= speed;
+    if(keys["ArrowDown"]) y += speed;
 
-        player.style.left = x + "px";
-        player.style.top = y + "px";
+    player.style.left = x + "px";
+    player.style.top = y + "px";
 
-        requestAnimationFrame(gameLoop);
+    requestAnimationFrame(gameLoop);
 
-    }
+}
 
-    gameLoop();
-// =====================
-// MOVIMENTO SEMPLICE
-// =====================
+gameLoop();
 
-const player = document.getElementById("player");
-
-let x = 80;
-
-document.addEventListener("keydown", function(event){
-
-    if(event.key === "ArrowRight"){
-
-        x += 10;
-
-        player.style.left = x + "px";
-
-    }
-
-});
 };
