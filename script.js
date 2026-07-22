@@ -56,8 +56,8 @@ window.onload = () => {
 
     const player = document.getElementById("player");
 
-    let x = -90;
-    let y = 390;
+    let x = 210;
+    let y = 620;
 
     const speed = 4;
 
@@ -72,9 +72,9 @@ document.addEventListener("keyup",(e)=>{
 
 function gameLoop(){
 
-    if(x < 120){
+    if(y < 390){
 
-        x += 2;
+        y -= 2;
 
     }else{
 
