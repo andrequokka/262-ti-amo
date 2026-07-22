@@ -59,7 +59,7 @@ window.onload = () => {
     let x = 210;
     let y = 620;
 
-    const speed = 4;
+    const speed = 4; let introWalk = true;
 
     window.keys = {};
 document.addEventListener("keydown",(e)=>{
@@ -75,7 +75,9 @@ function gameLoop(){
     if(y < 620){
 
         y -= 2;
-
+if(y <= 390){
+    introWalk = false;
+    
     }else{
 
         if(window.keys["ArrowLeft"]) x -= speed;
