@@ -255,11 +255,11 @@ body{
 
 }
 
-##player{
+#player{
 
     position:absolute;
 
-    width:112px;
+    width:96px;
 
     left:120px;
     top:350px;
