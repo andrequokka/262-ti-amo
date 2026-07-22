@@ -64,12 +64,12 @@ window.onload = () => {
     window.keys = {};
 
     document.addEventListener("keydown",(e)=>{
-        keys[e.key] = true;
-    });
+    window.keys[e.key] = true;
+});
 
-    document.addEventListener("keyup",(e)=>{
-        keys[e.key] = false;
-    });
+document.addEventListener("keyup",(e)=>{
+    window.keys[e.key] = false;
+});
 
     function gameLoop(){
 if(window.keys["ArrowLeft"]) x -= speed;
@@ -94,12 +94,16 @@ const right = document.getElementById("right");
 
 up.addEventListener("touchstart", () => window.keys["ArrowUp"] = true);
 up.addEventListener("touchend", () => window.keys["ArrowUp"] = false);
+up.addEventListener("touchcancel", () => window.keys["ArrowUp"] = false);
 
 down.addEventListener("touchstart", () => window.keys["ArrowDown"] = true);
 down.addEventListener("touchend", () => window.keys["ArrowDown"] = false);
+down.addEventListener("touchcancel", () => window.keys["ArrowDown"] = false);
 
 left.addEventListener("touchstart", () => window.keys["ArrowLeft"] = true);
 left.addEventListener("touchend", () => window.keys["ArrowLeft"] = false);
+left.addEventListener("touchcancel", () => window.keys["ArrowLeft"] = false);
 
 right.addEventListener("touchstart", () => window.keys["ArrowRight"] = true);
 right.addEventListener("touchend", () => window.keys["ArrowRight"] = false);
+right.addEventListener("touchcancel", () => window.keys["ArrowRight"] = false);
