@@ -86,5 +86,23 @@ window.onload = () => {
     }
 
     gameLoop();
+// =====================
+// MOVIMENTO SEMPLICE
+// =====================
 
+const player = document.getElementById("player");
+
+let x = 80;
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "ArrowRight"){
+
+        x += 10;
+
+        player.style.left = x + "px";
+
+    }
+
+});
 };
