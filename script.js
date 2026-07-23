@@ -74,6 +74,8 @@ let facing = "down";
     });
 
     // GAME LOOP
+   
+  function gameLoop() {  
     function let moving = false;
 
 if (window.keys["ArrowLeft"]) {
