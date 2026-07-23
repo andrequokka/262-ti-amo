@@ -61,7 +61,6 @@ window.onload = () => {
 
     const speed = 4; 
 
-};
 
     window.keys = {};
 document.addEventListener("keydown",(e)=>{
