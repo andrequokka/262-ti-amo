@@ -43,12 +43,19 @@ window.onload = () => {
     });
 
     // AVVIA GIOCO
-    play.onclick = () => {
+ play.onclick = () => {
 
-        titleScreen.classList.add("hidden");
-        gameScreen.classList.remove("hidden");
+    titleScreen.classList.add("hidden");
+    gameScreen.classList.remove("hidden");
 
-    };
+    const room = document.getElementById("room");
+
+    const roomRect = room.getBoundingClientRect();
+
+    x = roomRect.left + roomRect.width * 0.52;
+    y = roomRect.top + roomRect.height * 0.83;
+
+};
 
     // ======================
     // PLAYER
@@ -56,8 +63,8 @@ window.onload = () => {
 
     const player = document.getElementById("player");
 
-    let x = 255;
-    let y = 560;
+    let x = 0;
+    let y = 0;
 
     const speed = 4;
 let frame = 1;
