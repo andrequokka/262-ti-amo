@@ -76,8 +76,9 @@ function gameLoop(){
     if(y < 620){
 
         y -= 2;
-if(y <= 390){
-    introWalk = false;
+
+        if(y <= 390){
+        }  introWalk = false;
     
     }else{
 
@@ -95,7 +96,7 @@ if(y <= 390){
 
 }
 
-gameLoop();
+// gameLoop();
 
 const up = document.getElementById("up");
 const down = document.getElementById("down");
