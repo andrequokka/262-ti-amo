@@ -259,7 +259,7 @@ z-index:1;
 
     position:absolute;
 
-    width:136px;
+ width:min(136px,22vw);
 
    left:400px;
    top:600px;
