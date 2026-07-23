@@ -24,9 +24,9 @@ window.onload = () => {
         titleScreen.classList.add("hidden");
         menuScreen.classList.remove("hidden");
 
-        if(lettera.scrollHeight > lettera.clientHeight){
+        if (lettera.scrollHeight > lettera.clientHeight) {
             scrollHint.classList.remove("hidden");
-        }else{
+        } else {
             scrollHint.classList.add("hidden");
         }
 
@@ -42,7 +42,7 @@ window.onload = () => {
         scrollHint.classList.add("hidden");
     });
 
-    // GIOCO
+    // AVVIA GIOCO
     play.onclick = () => {
 
         titleScreen.classList.add("hidden");
@@ -51,66 +51,62 @@ window.onload = () => {
     };
 
     // ======================
-    // MOVIMENTO FEDE
+    // PLAYER
     // ======================
 
     const player = document.getElementById("player");
 
-    let x = 210;
-    let y = 620;
+    let x = 120;
+    let y = 350;
 
-    const speed = 4; 
-
+    const speed = 4;
 
     window.keys = {};
-document.addEventListener("keydown",(e)=>{
-    window.keys[e.key] = true;
-});
+        // TASTIERA
+    document.addEventListener("keydown", (e) => {
+        window.keys[e.key] = true;
+    });
 
-document.addEventListener("keyup",(e)=>{
-    window.keys[e.key] = false;
-});
+    document.addEventListener("keyup", (e) => {
+        window.keys[e.key] = false;
+    });
 
-function gameLoop(){
+    // GAME LOOP
+    function gameLoop() {
 
-    let nextX = x;
-    let nextY = y;
+        if (window.keys["ArrowLeft"]) x -= speed;
+        if (window.keys["ArrowRight"]) x += speed;
+        if (window.keys["ArrowUp"]) y -= speed;
+        if (window.keys["ArrowDown"]) y += speed;
 
-    if(window.keys["ArrowLeft"]) nextX -= speed;
-    if(window.keys["ArrowRight"]) nextX += speed;
-    if(window.keys["ArrowUp"]) nextY -= speed;
-    if(window.keys["ArrowDown"]) nextY += speed;
+        player.style.left = x + "px";
+        player.style.top = y + "px";
 
-    x = nextX;
-    y = nextY;
+        requestAnimationFrame(gameLoop);
+    }
 
-    player.style.left = x + "px";
-    player.style.top = y + "px";
+    gameLoop();
 
-    requestAnimationFrame(gameLoop);
+    // CONTROLLI TOUCH
+    const up = document.getElementById("up");
+    const down = document.getElementById("down");
+    const left = document.getElementById("left");
+    const right = document.getElementById("right");
 
-}
+    up.addEventListener("touchstart", () => window.keys["ArrowUp"] = true);
+    up.addEventListener("touchend", () => window.keys["ArrowUp"] = false);
+    up.addEventListener("touchcancel", () => window.keys["ArrowUp"] = false);
 
- gameLoop();
+    down.addEventListener("touchstart", () => window.keys["ArrowDown"] = true);
+    down.addEventListener("touchend", () => window.keys["ArrowDown"] = false);
+    down.addEventListener("touchcancel", () => window.keys["ArrowDown"] = false);
 
-const up = document.getElementById("up");
-const down = document.getElementById("down");
-const left = document.getElementById("left");
-const right = document.getElementById("right");
+    left.addEventListener("touchstart", () => window.keys["ArrowLeft"] = true);
+    left.addEventListener("touchend", () => window.keys["ArrowLeft"] = false);
+    left.addEventListener("touchcancel", () => window.keys["ArrowLeft"] = false);
 
-up.addEventListener("touchstart", () => window.keys["ArrowUp"] = true);
-up.addEventListener("touchend", () => window.keys["ArrowUp"] = false);
-up.addEventListener("touchcancel", () => window.keys["ArrowUp"] = false);
+    right.addEventListener("touchstart", () => window.keys["ArrowRight"] = true);
+    right.addEventListener("touchend", () => window.keys["ArrowRight"] = false);
+    right.addEventListener("touchcancel", () => window.keys["ArrowRight"] = false);
 
-down.addEventListener("touchstart", () => window.keys["ArrowDown"] = true);
-down.addEventListener("touchend", () => window.keys["ArrowDown"] = false);
-down.addEventListener("touchcancel", () => window.keys["ArrowDown"] = false);
-
-left.addEventListener("touchstart", () => window.keys["ArrowLeft"] = true);
-left.addEventListener("touchend", () => window.keys["ArrowLeft"] = false);
-left.addEventListener("touchcancel", () => window.keys["ArrowLeft"] = false);
-
-right.addEventListener("touchstart", () => window.keys["ArrowRight"] = true);
-right.addEventListener("touchend", () => window.keys["ArrowRight"] = false);
-right.addEventListener("touchcancel", () => window.keys["ArrowRight"] = false);
 };
