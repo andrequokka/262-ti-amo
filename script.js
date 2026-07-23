@@ -60,7 +60,12 @@ window.onload = () => {
     let y = 620;
 
     const speed = 4; 
-  
+  const bed = {
+    x: 350,
+    y: 180,
+    width: 210,
+    height: 150
+};
 
     window.keys = {};
 document.addEventListener("keydown",(e)=>{
@@ -73,13 +78,13 @@ document.addEventListener("keyup",(e)=>{
 
 function gameLoop(){
 
-    if(window.keys["ArrowLeft"]) x -= speed;
-    if(window.keys["ArrowRight"]) x += speed;
-    if(window.keys["ArrowUp"]) y -= speed;
-    if(window.keys["ArrowDown"]) y += speed;
+   let nextX = x;
+let nextY = y;
 
-    player.style.left = x + "px";
-    player.style.top = y + "px";
+if(window.keys["ArrowLeft"]) nextX -= speed;
+if(window.keys["ArrowRight"]) nextX += speed;
+if(window.keys["ArrowUp"]) nextY -= speed;
+if(window.keys["ArrowDown"]) nextY += speed;
 
     requestAnimationFrame(gameLoop);
 
