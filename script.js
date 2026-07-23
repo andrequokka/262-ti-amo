@@ -56,8 +56,8 @@ window.onload = () => {
 
     const player = document.getElementById("player");
 
-    let x = 120;
-    let y = 350;
+    let x = 250;
+    let y = 520;
 
     const speed = 4;
 
