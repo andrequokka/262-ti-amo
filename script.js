@@ -73,63 +73,65 @@ let facing = "down";
         window.keys[e.key] = false;
     });
 
-    // GAME LOOP
-   
-  function gameLoop() {  
-    function let moving = false;
+ // GAME LOOP
+function gameLoop() {
 
-if (window.keys["ArrowLeft"]) {
-    x -= speed;
-    facing = "left";
-    moving = true;
-}
+    let moving = false;
 
-if (window.keys["ArrowRight"]) {
-    x += speed;
-    facing = "right";
-    moving = true;
-}
-
-if (window.keys["ArrowUp"]) {
-    y -= speed;
-    facing = "up";
-    moving = true;
-}
-
-if (window.keys["ArrowDown"]) {
-    y += speed;
-    facing = "down";
-    moving = true;
-}
-if (moving) {
-
-    frameTimer++;
-
-    if (frameTimer > 10) {
-        frame = frame === 1 ? 2 : 1;
-        frameTimer = 0;
+    if (window.keys["ArrowLeft"]) {
+        x -= speed;
+        facing = "left";
+        moving = true;
     }
 
-    if (facing === "down") player.src = "assets/davanti-" + frame + ".png";
-    if (facing === "up") player.src = "assets/dietro-" + frame + ".png";
-    if (facing === "left") player.src = "assets/sinistra-" + frame + ".png";
-    if (facing === "right") player.src = "assets/destra-" + frame + ".png";
-
-} else {
-
-    if (facing === "down") player.src = "assets/davanti-f.png";
-    if (facing === "up") player.src = "assets/dietro-f.png";
-    if (facing === "left") player.src = "assets/sinistra-f.png";
-    if (facing === "right") player.src = "assets/destra-f.png";
-
-}
-        player.style.left = x + "px";
-        player.style.top = y + "px";
-
-        requestAnimationFrame(gameLoop);
+    if (window.keys["ArrowRight"]) {
+        x += speed;
+        facing = "right";
+        moving = true;
     }
 
-    gameLoop();
+    if (window.keys["ArrowUp"]) {
+        y -= speed;
+        facing = "up";
+        moving = true;
+    }
+
+    if (window.keys["ArrowDown"]) {
+        y += speed;
+        facing = "down";
+        moving = true;
+    }
+
+    if (moving) {
+
+        frameTimer++;
+
+        if (frameTimer > 10) {
+            frame = (frame === 1) ? 2 : 1;
+            frameTimer = 0;
+        }
+
+        if (facing === "down") player.src = "assets/davanti-" + frame + ".png";
+        if (facing === "up") player.src = "assets/dietro-" + frame + ".png";
+        if (facing === "left") player.src = "assets/sinistra-" + frame + ".png";
+        if (facing === "right") player.src = "assets/destra-" + frame + ".png";
+
+    } else {
+
+        if (facing === "down") player.src = "assets/davanti-f.png";
+        if (facing === "up") player.src = "assets/dietro-f.png";
+        if (facing === "left") player.src = "assets/sinistra-f.png";
+        if (facing === "right") player.src = "assets/destra-f.png";
+
+    }
+
+    player.style.left = x + "px";
+    player.style.top = y + "px";
+
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();  
 
     // CONTROLLI TOUCH
     const up = document.getElementById("up");
