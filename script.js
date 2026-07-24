@@ -48,8 +48,8 @@ window.onload = () => {
     titleScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
 
-    x = 540;
-    y = 590;
+   x = 355;
+   y = 520;
 
     inCutscene = true;
 
