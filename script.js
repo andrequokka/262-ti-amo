@@ -89,7 +89,7 @@ function gameLoop(){
     // CUTSCENE ENTRATA
     if(inCutscene){
 
-        x-=2;
+        y-=2;
 
         moving=true;
         facing="left";
