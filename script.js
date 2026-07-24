@@ -60,7 +60,7 @@ y = 76;
 // ======================
 
 const player = document.getElementById("player");
-
+const debug = document.getElementById("debug");
 x = 62;
 y = 82;
 
@@ -164,7 +164,11 @@ function gameLoop(){
     }
 player.style.left = x + "%";
 player.style.top = y + "%";
-
+debug.innerHTML = `
+X = ${Math.round(x)}
+<br>
+Y = ${Math.round(y)}
+`;
     requestAnimationFrame(gameLoop);
 
 }
