@@ -390,3 +390,23 @@ body{
     z-index:999;
 
 }
+#debug{
+
+    position:fixed;
+
+    top:10px;
+    left:10px;
+
+    background:rgba(0,0,0,.7);
+
+    color:white;
+
+    padding:8px 12px;
+
+    font-size:10px;
+
+    font-family:'Press Start 2P';
+
+    z-index:99999;
+
+}
