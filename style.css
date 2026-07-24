@@ -369,19 +369,17 @@ z-index:1;
 
     }
 
-}
-#andre{
-
+}#andre{
     position:absolute;
 
-  width:88px;
-  height:88px;
+    width:120px;
+    height:auto;
 
-    left:280px;
+    left:285px;
     top:175px;
 
     image-rendering:pixelated;
+    image-rendering:crisp-edges;
 
     z-index:5;
-
 }
