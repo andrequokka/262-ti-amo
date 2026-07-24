@@ -92,7 +92,20 @@ let facing = "down";
 function gameLoop() {
 
     let moving = false;
+if (inCutscene) {
 
+    x -= 2;          // Fede cammina verso sinistra
+    moving = true;
+    facing = "left";
+
+    if (x <= 290) {  // Ci fermeremo qui (poi lo regoleremo meglio)
+
+        x = 290;
+        inCutscene = false;
+
+    }
+
+}
     if (window.keys["ArrowLeft"]) {
         x -= speed;
         facing = "left";
