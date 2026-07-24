@@ -48,8 +48,9 @@ window.onload = () => {
     titleScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
 
-   x = 355;
-   y = 520;
+   // posizione iniziale cutscene
+x = 355;
+y = 520;
 
     inCutscene = true;
 
@@ -94,9 +95,9 @@ function gameLoop(){
         moving=true;
         facing="up";
 
-        if(x<=290){
+        if(y<=500){
 
-            x=290;
+            y=500;
             inCutscene=false;
 
         }
