@@ -373,3 +373,18 @@ z-index:1;
     }
 
 }
+#andre{
+
+    position:absolute;
+
+    width:64px;
+    height:64px;
+
+    left:250px;
+    top:160px;
+
+    image-rendering:pixelated;
+
+    z-index:5;
+
+}
