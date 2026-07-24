@@ -49,8 +49,8 @@ window.onload = () => {
     gameScreen.classList.remove("hidden");
 
    // posizione iniziale cutscene
-x = 355;
-y = 520;
+x = 55;
+y = 76;
 
     inCutscene = true;
 
