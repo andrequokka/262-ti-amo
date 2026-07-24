@@ -92,7 +92,7 @@ function gameLoop(){
         y-=2;
 
         moving=true;
-        facing="left";
+        facing="up";
 
         if(x<=290){
 
