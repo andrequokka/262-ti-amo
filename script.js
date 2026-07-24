@@ -52,8 +52,8 @@ window.onload = () => {
 
     const roomRect = room.getBoundingClientRect();
 
-   x = 255;
-   y = 590;
+   let x = 255;
+   let y = 590;
 
 };
 
@@ -64,7 +64,7 @@ window.onload = () => {
     const player = document.getElementById("player");
 
     x = 420;
-y = 590;
+    y = 590;
 
 let inCutscene = true;
 
