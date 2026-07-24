@@ -52,7 +52,7 @@ window.onload = () => {
 
     const roomRect = room.getBoundingClientRect();
 
-   x = 250;
+   x = 255;
    y = 590;
 
 };
