@@ -59,8 +59,8 @@ window.onload = () => {
 
 const player = document.getElementById("player");
 const debug = document.getElementById("debug");
-let x = 260;
-let y = 520;
+let x = 170;
+let y = 610;
 
 let inCutscene = true;
 
