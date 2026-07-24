@@ -49,7 +49,7 @@ window.onload = () => {
     gameScreen.classList.remove("hidden");
 
    // posizione iniziale cutscene
-x = 190;
+x = 220;
 y = 570;
 inCutscene = true;
 };
@@ -59,8 +59,8 @@ inCutscene = true;
 
 const player = document.getElementById("player");
 const debug = document.getElementById("debug");
-let x = 220;
-let y = 600;
+let x = 190;
+let y = 570;
 
 let inCutscene = false;
 
@@ -93,9 +93,9 @@ function gameLoop(){
         moving=true;
         facing="up";
 
-      if (y <= 560) {
+      if (y <= 250) {
 
-    y = 30;
+    y = 250;
     inCutscene = false;
 
 }
