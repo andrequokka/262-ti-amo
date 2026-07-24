@@ -237,8 +237,7 @@ body{
     background:#000;
 
 }
-
-#room{
+#roomContainer{
 
     position:absolute;
 
@@ -248,13 +247,18 @@ body{
     transform:translate(-50%,-50%);
 
     width:min(90vw,650px);
-    height:auto;
+
+}
+#room{
+
+    width:100%;
+
+    display:block;
 
     image-rendering:pixelated;
     image-rendering:crisp-edges;
-z-index:1;
-}
 
+}
 #player{
 
     position:absolute;
