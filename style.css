@@ -378,12 +378,11 @@ z-index:1;
     width:110px;
     height:110px;
 
-    left:285px;
-    top:175px;
+    left:220px;
+    top:250px;
 
     image-rendering:pixelated;
     image-rendering:crisp-edges;
 
     z-index:999;
-
 }
