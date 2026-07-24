@@ -263,7 +263,7 @@ body{
 
     position:absolute;
 
- width:min(136px,22vw);
+    width:21%;
 
     image-rendering:pixelated;
     image-rendering:crisp-edges;
@@ -379,14 +379,14 @@ body{
 
     position:absolute;
 
-    width:110px;
-    height:110px;
+    width:17%;
 
-    left:220px;
-    top:250px;
+    left:42%;
+    top:26%;
 
     image-rendering:pixelated;
     image-rendering:crisp-edges;
 
     z-index:999;
+
 }
