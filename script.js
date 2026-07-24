@@ -48,114 +48,128 @@ window.onload = () => {
     titleScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
 
-    const room = document.getElementById("room");
-
-    const roomRect = room.getBoundingClientRect();
-
-   let x = 255;
-   let y = 590;
-
-};
-
-    // ======================
-    // PLAYER
-    // ======================
-
-    const player = document.getElementById("player");
-
     x = 420;
     y = 590;
 
+    inCutscene = true;
+
+};
+// ======================
+// PLAYER
+// ======================
+
+const player = document.getElementById("player");
+
+let x = 420;
+let y = 590;
+
 let inCutscene = true;
 
-
-    const speed = 4;
+const speed = 4;
 let frame = 1;
 let frameTimer = 0;
-let facing = "down";
-    window.keys = {};
-    
-        // TASTIERA
-    document.addEventListener("keydown", (e) => {
-        window.keys[e.key] = true;
-    });
+let facing = "left";
 
-    document.addEventListener("keyup", (e) => {
-        window.keys[e.key] = false;
-    });
+window.keys = {};
 
- // GAME LOOP
-function gameLoop() {
+// TASTIERA
+document.addEventListener("keydown", (e)=>{
+    window.keys[e.key]=true;
+});
 
-    let moving = false;
-if (inCutscene) {
+document.addEventListener("keyup",(e)=>{
+    window.keys[e.key]=false;
+});
 
-    x -= 2;          // Fede cammina verso sinistra
-    moving = true;
-    facing = "left";
+// GAME LOOP
+function gameLoop(){
 
-    if (x <= 290) {  // Ci fermeremo qui (poi lo regoleremo meglio)
+    let moving=false;
 
-        x = 290;
-        inCutscene = false;
+    // CUTSCENE ENTRATA
+    if(inCutscene){
+
+        x-=2;
+
+        moving=true;
+        facing="left";
+
+        if(x<=290){
+
+            x=290;
+            inCutscene=false;
+
+        }
+
+    }else{
+
+        if(window.keys["ArrowLeft"]){
+
+            x-=speed;
+            facing="left";
+            moving=true;
+
+        }
+
+        if(window.keys["ArrowRight"]){
+
+            x+=speed;
+            facing="right";
+            moving=true;
+
+        }
+
+        if(window.keys["ArrowUp"]){
+
+            y-=speed;
+            facing="up";
+            moving=true;
+
+        }
+
+        if(window.keys["ArrowDown"]){
+
+            y+=speed;
+            facing="down";
+            moving=true;
+
+        }
 
     }
 
-}
-    if (window.keys["ArrowLeft"]) {
-        x -= speed;
-        facing = "left";
-        moving = true;
-    }
-
-    if (window.keys["ArrowRight"]) {
-        x += speed;
-        facing = "right";
-        moving = true;
-    }
-
-    if (window.keys["ArrowUp"]) {
-        y -= speed;
-        facing = "up";
-        moving = true;
-    }
-
-    if (window.keys["ArrowDown"]) {
-        y += speed;
-        facing = "down";
-        moving = true;
-    }
-
-    if (moving) {
+    if(moving){
 
         frameTimer++;
 
-        if (frameTimer > 10) {
-            frame = (frame === 1) ? 2 : 1;
-            frameTimer = 0;
+        if(frameTimer>10){
+
+            frame=(frame===1)?2:1;
+            frameTimer=0;
+
         }
 
-        if (facing === "down") player.src = "assets/davanti-" + frame + ".png";
-        if (facing === "up") player.src = "assets/dietro-" + frame + ".png";
-        if (facing === "left") player.src = "assets/sinistra-" + frame + ".png";
-        if (facing === "right") player.src = "assets/destra-" + frame + ".png";
+        if(facing==="down") player.src="assets/davanti-"+frame+".png";
+        if(facing==="up") player.src="assets/dietro-"+frame+".png";
+        if(facing==="left") player.src="assets/sinistra-"+frame+".png";
+        if(facing==="right") player.src="assets/destra-"+frame+".png";
 
-    } else {
+    }else{
 
-        if (facing === "down") player.src = "assets/davanti-f.png";
-        if (facing === "up") player.src = "assets/dietro-f.png";
-        if (facing === "left") player.src = "assets/sinistra-f.png";
-        if (facing === "right") player.src = "assets/destra-f.png";
+        if(facing==="down") player.src="assets/davanti-f.png";
+        if(facing==="up") player.src="assets/dietro-f.png";
+        if(facing==="left") player.src="assets/sinistra-f.png";
+        if(facing==="right") player.src="assets/destra-f.png";
 
     }
 
-    player.style.left = x + "px";
-    player.style.top = y + "px";
+    player.style.left=x+"px";
+    player.style.top=y+"px";
 
     requestAnimationFrame(gameLoop);
+
 }
 
-gameLoop();  
+gameLoop();
 
     // CONTROLLI TOUCH
     const up = document.getElementById("up");
