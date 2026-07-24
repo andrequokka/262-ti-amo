@@ -63,15 +63,11 @@ window.onload = () => {
 
     const player = document.getElementById("player");
 
-    let x = 130;
-let y = 590;
+    x = 420;
+y = 590;
 
 let inCutscene = true;
 
-const speed = 4;
-let frame = 1;
-let frameTimer = 0;
-let facing = "down";
 
     const speed = 4;
 let frame = 1;
