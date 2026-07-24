@@ -59,8 +59,8 @@ window.onload = () => {
 
 const player = document.getElementById("player");
 const debug = document.getElementById("debug");
-let x = 62;
-let y = 82;
+let x = 260;
+let y = 520;
 
 let inCutscene = true;
 
@@ -160,8 +160,8 @@ function gameLoop(){
         if(facing==="right") player.src="assets/destra-f.png";
 
     }
-player.style.left = x + "%";
-player.style.top = y + "%";
+player.style.left = x + "px";
+player.style.top = y + "px";
 debug.innerHTML = `
 X = ${Math.round(x)}
 <br>
