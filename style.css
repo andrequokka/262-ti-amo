@@ -374,11 +374,11 @@ z-index:1;
 
     position:absolute;
 
-    width:64px;
-    height:64px;
+  width:88px;
+  height:88px;
 
-    left:250px;
-    top:160px;
+    left:280px;
+    top:175px;
 
     image-rendering:pixelated;
 
