@@ -61,8 +61,8 @@ y = 520;
 
 const player = document.getElementById("player");
 
-let x = 420;
-let y = 590;
+x = 62;
+y = 82;
 
 let inCutscene = true;
 
@@ -162,9 +162,8 @@ function gameLoop(){
         if(facing==="right") player.src="assets/destra-f.png";
 
     }
-
-    player.style.left=x+"px";
-    player.style.top=y+"px";
+player.style.left = x + "%";
+player.style.top = y + "%";
 
     requestAnimationFrame(gameLoop);
 
