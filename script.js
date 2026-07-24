@@ -63,8 +63,8 @@ window.onload = () => {
 
     const player = document.getElementById("player");
 
-    let x = 225;
-    let y = 545;
+    let x = 170;
+    let y = 590;
 
     const speed = 4;
 let frame = 1;
