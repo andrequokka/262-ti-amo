@@ -107,7 +107,7 @@ function gameLoop(){
 
         dialogBox.classList.remove("hidden");
 
-    }, 500);
+    }, 1000);
 
 }
 
