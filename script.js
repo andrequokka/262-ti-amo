@@ -61,6 +61,34 @@ inCutscene = true;
 const player = document.getElementById("player");
 const andre = document.getElementById("andre");
 const dialogBox = document.getElementById("dialogBox");
+    const dialogText = document.getElementById("dialogText");
+const speaker = document.getElementById("speaker");
+
+const dialoghi = [
+    {
+        speaker: "✦ Quokka",
+        text: "ciao amore!! 💗"
+    },
+    {
+        speaker: "✦ Quokka",
+        text: "finalmente sei arrivato..."
+    },
+    {
+        speaker: "✦ Quokka",
+        text: "ho preparato una sorpresa per te...!"
+     },
+    {
+        speaker: "✦ Quokka",
+        text: "però uhm...l'ho messa al sicuro e non ricordo il codice"
+        },
+    {
+        speaker: "✦ Quokka",
+        text: "puoi aiutarmi..?"
+    }
+    
+];
+
+let dialogIndex = 0;
 let andreX = 0;
 let andreY = 0;
 const debug = document.getElementById("debug");
@@ -105,7 +133,8 @@ function gameLoop(){
 
     setTimeout(() => {
 
-    dialogBox.classList.remove("hidden");
+   
+dialogBox.classList.remove("hidden");
 
 }, 1000);
 }
