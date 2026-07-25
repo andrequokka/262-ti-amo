@@ -69,7 +69,7 @@ let y = 570;
 
 let inCutscene = false;
 
-const speed = 4;
+const speed = 10;
 let frame = 1;
 let frameTimer = 0;
 let facing = "up";
