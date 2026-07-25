@@ -58,6 +58,7 @@ inCutscene = true;
 // ======================
 
 const player = document.getElementById("player");
+const andre = document.getElementById("andre");
 const debug = document.getElementById("debug");
 let x = 190;
 let y = 570;
