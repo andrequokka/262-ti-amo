@@ -48,6 +48,7 @@ window.onload = () => {
     titleScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
 
+     document.getElementById("controls").style.display = "flex";
    // posizione iniziale cutscene
 x = 220;
 y = 570;
