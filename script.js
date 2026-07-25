@@ -97,10 +97,12 @@ function gameLoop(){
         moving=true;
         facing="up";
 
-      if (y <= 380) {
+      if (y <= 350) {
 
-    y = 380;
+    y = 350;
     inCutscene = false;
+
+    console.log("Dialogo con Andre!");
 
 }
 
