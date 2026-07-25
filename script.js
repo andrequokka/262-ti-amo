@@ -105,10 +105,11 @@ function gameLoop(){
 
     setTimeout(() => {
 
-        dialogBox.classList.remove("hidden");
+    alert("Il dialogo sta per comparire!");
 
-    }, 1000);
+    dialogBox.classList.remove("hidden");
 
+}, 1000);
 }
 
     }else{
