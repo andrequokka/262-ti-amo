@@ -163,6 +163,9 @@ function gameLoop(){
     }
 player.style.left = x + "px";
 player.style.top = y + "px";
+
+player.style.zIndex = Math.floor(y);
+    
 debug.innerHTML = `
 X = ${Math.round(x)}
 <br>
