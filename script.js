@@ -67,25 +67,33 @@ const speaker = document.getElementById("speaker");
 const dialoghi = [
     {
         speaker: "✦ Quokka",
-        text: "ciao amore!! 💗"
+        text: "ciao amore!! 💗",
+        face: "assets/andre-innamorata.png"
     },
+
     {
         speaker: "✦ Quokka",
-        text: "finalmente sei arrivato..."
+        text: "finalmente sei arrivato...",
+        face: "assets/andre-felice.png"
     },
+
     {
         speaker: "✦ Quokka",
-        text: "ho preparato una sorpresa per te...!"
-     },
+        text: "ho preparato una sorpresa per te...!",
+        face: "assets/andre-imbarazzata.png"
+    },
+
     {
         speaker: "✦ Quokka",
-        text: "però uhm...l'ho messa al sicuro e non ricordo il codice"
-        },
+        text: "però uhm...l'ho messa al sicuro e non ricordo il codice",
+        face: "assets/andre-neutra.png"
+    },
+
     {
         speaker: "✦ Quokka",
-        text: "puoi aiutarmi..?"
+        text: "puoi aiutarmi..?",
+        face: "assets/andre-triste.png"
     }
-    
 ];
 
 let dialogIndex = 0;
