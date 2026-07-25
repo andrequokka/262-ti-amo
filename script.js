@@ -89,6 +89,22 @@ const dialoghi = [
 ];
 
 let dialogIndex = 0;
+    dialogBox.addEventListener("click", () => {
+
+    dialogIndex++;
+
+    if (dialogIndex < dialoghi.length) {
+
+        speaker.textContent = dialoghi[dialogIndex].speaker;
+        dialogText.textContent = dialoghi[dialogIndex].text;
+
+    } else {
+
+        dialogBox.classList.add("hidden");
+
+    }
+
+});
 let andreX = 0;
 let andreY = 0;
 const debug = document.getElementById("debug");
@@ -133,8 +149,12 @@ function gameLoop(){
 
     setTimeout(() => {
 
-   
-dialogBox.classList.remove("hidden");
+    dialogIndex = 0;
+
+    speaker.textContent = dialoghi[0].speaker;
+    dialogText.textContent = dialoghi[0].text;
+
+    dialogBox.classList.remove("hidden");
 
 }, 1000);
 }
