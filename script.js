@@ -95,9 +95,9 @@ function gameLoop(){
         moving=true;
         facing="up";
 
-      if (y <= 350) {
+      if (y <= 380) {
 
-    y = 350;
+    y = 380;
     inCutscene = false;
 
 }
