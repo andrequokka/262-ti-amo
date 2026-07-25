@@ -60,6 +60,8 @@ inCutscene = true;
 
 const player = document.getElementById("player");
 const andre = document.getElementById("andre");
+let andreX = 0;
+let andreY = 0;
 const debug = document.getElementById("debug");
 let x = 190;
 let y = 570;
@@ -164,7 +166,8 @@ function gameLoop(){
     }
 player.style.left = x + "px";
 player.style.top = y + "px";
-
+andreX = andre.offsetLeft;
+andreY = andre.offsetTop;
 player.style.zIndex = Math.floor(y);
     
 debug.innerHTML = `
