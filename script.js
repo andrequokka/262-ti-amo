@@ -50,7 +50,7 @@ window.onload = () => {
 
      document.getElementById("controls").style.display = "flex";
    // posizione iniziale cutscene
-x = 220;
+x = 190;
 y = 570;
 inCutscene = true;
 };
