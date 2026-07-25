@@ -103,7 +103,7 @@ function gameLoop(){
     inCutscene = false;
 
     console.log("Dialogo con Andre!");
-
+ }, 500);
 }
 
     }else{
