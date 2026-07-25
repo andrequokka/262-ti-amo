@@ -72,7 +72,7 @@ let inCutscene = false;
 const speed = 4;
 let frame = 1;
 let frameTimer = 0;
-let facing = "left";
+let facing = "up";
 
 window.keys = {};
 
@@ -104,8 +104,6 @@ function gameLoop(){
     inCutscene = false;
 
     setTimeout(() => {
-
-    alert("Il dialogo sta per comparire!");
 
     dialogBox.classList.remove("hidden");
 
