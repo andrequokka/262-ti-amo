@@ -60,6 +60,7 @@ inCutscene = true;
 
 const player = document.getElementById("player");
 const andre = document.getElementById("andre");
+const dialogBox = document.getElementById("dialogBox");
 let andreX = 0;
 let andreY = 0;
 const debug = document.getElementById("debug");
@@ -97,13 +98,17 @@ function gameLoop(){
         moving=true;
         facing="up";
 
-      if (y <= 350) {
+   if (y <= 350) {
 
     y = 350;
     inCutscene = false;
 
-    console.log("Dialogo con Andre!");
- }, 500);
+    setTimeout(() => {
+
+        dialogBox.classList.remove("hidden");
+
+    }, 500);
+
 }
 
     }else{
