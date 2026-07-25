@@ -268,7 +268,7 @@ body{
     image-rendering:pixelated;
     image-rendering:crisp-edges;
 
-    z-index:1000;
+    z-index:2;
 
 }
 
@@ -387,7 +387,7 @@ body{
     image-rendering:pixelated;
     image-rendering:crisp-edges;
 
-    z-index:999;
+    z-index:2;
 
 }
 #debug{
