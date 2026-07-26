@@ -107,9 +107,9 @@ let dialogIndex = 0;
 
         speaker.textContent = dialoghi[dialogIndex].speaker;
         dialogText.textContent = dialoghi[dialogIndex].text;
-        leftPortrait.src = dialoghi[dialogIndex].face;
-        leftPortrait.style.width = "90px";
-        leftPortrait.style.height = "90px";
+        rightPortrait.src = dialoghi[dialogIndex].face;
+        rightPortrait.style.width = "120px";
+        rightPortrait.style.height = "120px";
     } else {
 
         dialogBox.classList.add("hidden");
