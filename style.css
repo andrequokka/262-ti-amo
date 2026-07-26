@@ -478,27 +478,22 @@ body{
     }
 
 }
-#leftPortrait,
+##leftPortrait,
 #rightPortrait{
 
-    width:120px;
-    height:120px;
-
-    image-rendering:pixelated;
-    image-rendering:crisp-edges;
-
-}
-
-#dialogCenter{
-    flex:1;
-}
-#leftPortrait,
-#rightPortrait{
-    width:170px;
-    height:170px;
+    width:190px;
+    height:190px;
 
     object-fit:contain;
 
     image-rendering:pixelated;
     image-rendering:crisp-edges;
+}
+
+#dialogCenter{
+    flex:1;
+}
+#rightPortrait{
+    position: relative;
+    top: -15px;
 }
