@@ -481,19 +481,19 @@ body{
 ##leftPortrait,
 #rightPortrait{
 
-    width:130px;
-    height:130px;
+    position: relative;
+    top: -12px;
 
-    object-fit:contain;
+    width: 150px;
+    height: 150px;
 
-    image-rendering:pixelated;
-    image-rendering:crisp-edges;
+    object-fit: contain;
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+
 }
 
 #dialogCenter{
     flex:1;
-}
-#rightPortrait{
-    position: relative;
-    top: -15px;
 }
