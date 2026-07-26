@@ -439,7 +439,10 @@ body{
     line-height:1.8;
 
     z-index:9999;
-
+    
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
 #dialogName{
@@ -473,3 +476,17 @@ body{
         opacity:0;
 
     }
+#leftPortrait,
+#rightPortrait{
+
+    width:90px;
+    height:90px;
+
+    image-rendering:pixelated;
+    image-rendering:crisp-edges;
+
+}
+
+#dialogCenter{
+    flex:1;
+}
