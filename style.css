@@ -490,8 +490,12 @@ body{
 #dialogCenter{
     flex:1;
 }
-#leftPortrait{
-    width:80px !important;
-    height:80px !important;
-    position:relative !important;
+##leftPortrait,
+#rightPortrait{
+    width:90px !important;
+    height:90px !important;
+    max-width:90px !important;
+    max-height:90px !important;
+    object-fit:contain;
+    image-rendering:pixelated;
 }
