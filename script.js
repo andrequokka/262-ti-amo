@@ -61,38 +61,40 @@ inCutscene = true;
 const player = document.getElementById("player");
 const andre = document.getElementById("andre");
 const dialogBox = document.getElementById("dialogBox");
-    const dialogText = document.getElementById("dialogText");
+const dialogText = document.getElementById("dialogText");
 const speaker = document.getElementById("speaker");
-
-const dialoghi = [
+const leftPortrait = document.getElementById("leftPortrait");
+    const rightPortrait = document.getElementById("rightPortrait")
+        
+    const dialoghi = [
     {
         speaker: "✦ Quokka",
         text: "ciao amore!! 💗",
-        
+        face: "assets/andre-innamorata.png"
     },
 
     {
         speaker: "✦ Quokka",
         text: "finalmente sei arrivato...",
-        
+        face: "assets/andre-felice.png"
     },
 
     {
         speaker: "✦ Quokka",
         text: "ho preparato una sorpresa per te...!",
-        
+        face: "assets/andre-imbarazzata.png"
     },
 
     {
         speaker: "✦ Quokka",
         text: "però uhm...l'ho messa al sicuro e non ricordo il codice",
-       
+        face: "assets/andre-neutra.png"
     },
 
     {
         speaker: "✦ Quokka",
         text: "puoi aiutarmi..?",
-        
+        face: "assets/andre-triste.png"
     }
 ];
 
