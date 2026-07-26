@@ -110,8 +110,7 @@ let dialogIndex = 0;
         rightPortrait.src = dialoghi[dialogIndex].face;
         leftPortrait.style.display = "none";
         rightPortrait.style.display = "block";
-        rightPortrait.style.width = "120px";
-        rightPortrait.style.height = "120px";
+        
     } else {
 
         dialogBox.classList.add("hidden");
