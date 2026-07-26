@@ -107,7 +107,7 @@ let dialogIndex = 0;
 
         speaker.textContent = dialoghi[dialogIndex].speaker;
         dialogText.textContent = dialoghi[dialogIndex].text;
-
+        leftPortrait.src = dialoghi[dialogIndex].face;
     } else {
 
         dialogBox.classList.add("hidden");
@@ -163,7 +163,7 @@ function gameLoop(){
 
     speaker.textContent = dialoghi[0].speaker;
     dialogText.textContent = dialoghi[0].text;
-
+    leftPortrait.src = dialoghi[0].face;
     dialogBox.classList.remove("hidden");
 
 }, 1000);
