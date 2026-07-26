@@ -108,6 +108,8 @@ let dialogIndex = 0;
         speaker.textContent = dialoghi[dialogIndex].speaker;
         dialogText.textContent = dialoghi[dialogIndex].text;
         rightPortrait.src = dialoghi[dialogIndex].face;
+        leftPortrait.style.display = "none";
+        rightPortrait.style.display = "block";
         rightPortrait.style.width = "120px";
         rightPortrait.style.height = "120px";
     } else {
@@ -165,10 +167,9 @@ function gameLoop(){
 
     speaker.textContent = dialoghi[0].speaker;
     dialogText.textContent = dialoghi[0].text;
-    leftPortrait.src = dialoghi[0].face;
-    
-    leftPortrait.style.width = "90px";
-    leftPortrait.style.height = "90px";
+    rightPortrait.src = dialoghi[0].face;
+    leftPortrait.style.display = "none";
+    rightPortrait.style.display = "block";
       dialogBox.classList.remove("hidden");  
 
 }, 1000);
