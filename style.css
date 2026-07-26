@@ -476,6 +476,8 @@ body{
         opacity:0;
 
     }
+
+}
 #leftPortrait,
 #rightPortrait{
 
@@ -490,7 +492,7 @@ body{
 #dialogCenter{
     flex:1;
 }
-##leftPortrait,
+#leftPortrait,
 #rightPortrait{
     width:90px !important;
     height:90px !important;
