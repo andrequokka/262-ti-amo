@@ -166,7 +166,10 @@ function gameLoop(){
     speaker.textContent = dialoghi[0].speaker;
     dialogText.textContent = dialoghi[0].text;
     leftPortrait.src = dialoghi[0].face;
-    dialogBox.classList.remove("hidden");
+    
+    leftPortrait.style.width = "90px";
+    leftPortrait.style.height = "90px";
+      dialogBox.classList.remove("hidden");  
 
 }, 1000);
 }
